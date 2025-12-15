@@ -156,8 +156,6 @@
       ];
 
       const typingSpeed = 70;
-      
-      // FIX #1: Get the HTML Audio Element instead of creating "new Audio()"
       const audio = document.getElementById('bg-music');
 
       const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -193,7 +191,6 @@
         lyricsScreen.classList.add('animate-fade-in', 'flex');
         mainContainer.classList.add('animate-heartbeat-bg');
         
-        // Play the audio from the HTML tag
         audio.play().then(() => {
             console.log("Audio playing successfully");
         }).catch(error => {
@@ -207,4 +204,3 @@
   </script>
 </body>
 </html>
-
